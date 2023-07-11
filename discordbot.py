@@ -29,8 +29,8 @@ async def on_message(message):
 
     if message.content == f'{PREFIX}서버오픈' :
         svop = "안내봇 테스트중... @subway_kr"
-        channel = bot.get_channel('1098618958795526224')
-        await channel.send(svop)
+        svopch = bot.get_channel('1098618958795526224')
+        await svopch.send(svop)
 
 @client.event
 async def on_member_join(member) :
