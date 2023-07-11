@@ -3,6 +3,8 @@ from distutils.sysconfig import PREFIX
 import discord
 from dotenv import load_dotenv
 import os
+intents = discord.Intents.all()
+intents.members = True
 load_dotenv()
 
 PREFIX = os.environ['PREFIX']
@@ -24,7 +26,12 @@ async def on_message(message):
 
     if message.content.startswith(f'{PREFIX}hello'):
         await message.channel.send('Hello!')
-
+        
+@client.event
+async def on_member_join(member) :
+    msg = "안녕하세요! 뉴라이프에 오신것을 환영합니다!"
+    channel = bot.get_channel('1098618960297087050')
+    await channel.send(msg)
 
 try:
     client.run(TOKEN)
