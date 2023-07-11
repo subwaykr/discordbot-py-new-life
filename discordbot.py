@@ -32,6 +32,22 @@ async def on_message(message):
         channel = client.get_channel(1098618958795526224)
         await channel.send(msg)
 
+    if message.content == f'{PREFIX}미인증공지' :
+        msg = "<@&1098618958740987915> 
+뉴라이프 | NewLife 입국 [인증] 양식입니다.
+
+=========================================
+로블록스 닉네임 : 
+로블록스 프로필링크 : 
+인벤토리를 오픈했나요: [O/X]
+그룹 가입 인증사진 : 
+=========================================
+
+어렵지 않은 간단한 양식이니, 이 양식에 따라서 입국심사 [인증] 해주시면 감사하겠습니다.
+-뉴라이프 관리진 일동-"
+        channel = client.get_channel(1098618960007671827)
+        await channel.send(msg)
+
 @client.event
 async def on_member_join(member) :
     msg = "안녕하세요! 뉴라이프에 오신것을 환영합니다!"
