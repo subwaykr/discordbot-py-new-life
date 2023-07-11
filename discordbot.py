@@ -28,7 +28,7 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
     if message.content == f'{PREFIX}서버오픈' :
-        msg = "안내봇 테스트중... @subway_kr"
+        msg = "안내봇 테스트중... <@813959563584864266>"
         channel = client.get_channel(1098618958795526224)
         await channel.send(msg)
 
