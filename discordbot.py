@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-PREFIX = os.environ['!']
-TOKEN = os.environ['MTEyNzU1NzE5Njg2NDAyODcyMw.GV4yum.wvktw7wxzF-vtBn-q5I-xHqxtJYOHRTQr4EzGo']
+PREFIX = os.environ['PREFIX']
+TOKEN = os.environ['TOKEN']
 
 client = discord.Client()
 
