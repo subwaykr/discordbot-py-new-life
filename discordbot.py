@@ -37,8 +37,13 @@ async def on_message(message):
         channel = client.get_channel(1098618958795526224)
         await channel.send(msg)
 
-    if message.content == f'{PREFIX}안내봇점검' :
+    if message.content == f'{PREFIX}점검실시' :
         msg = ":tools: 안내봇 점검 및 테스트중입니다! 이용에 착오없으시길 바랍니다."
+        channel = client.get_channel(1098618958795526224)
+        await channel.send(msg)
+
+    if message.content == f'{PREFIX}점검완료' :
+        msg = ":white_check_mark: 안내봇 점검이 종료되었습니다!"
         channel = client.get_channel(1098618958795526224)
         await channel.send(msg)
 
