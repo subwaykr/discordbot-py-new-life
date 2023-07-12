@@ -50,7 +50,7 @@ async def on_message(message):
 
     if message.content == f'{PREFIX}점검실시' :
         guild = client.get_guild(1098618958740987914)
-        role = 1098618958795526218
+        role = guild.get_role(1098618958795526218)
         if message.author == role.members :
             msg = ":tools: 안내봇 점검 및 테스트중입니다! 이용에 착오없으시길 바랍니다."
             channel = client.get_channel(1098618958795526224)
