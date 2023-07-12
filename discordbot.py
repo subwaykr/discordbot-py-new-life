@@ -3,6 +3,8 @@ from distutils.sysconfig import PREFIX
 import discord
 from dotenv import load_dotenv
 import os
+from discord.ext import commands
+from discord.utils import get
 intents = discord.Intents.all()
 intents.members = True
 load_dotenv()
