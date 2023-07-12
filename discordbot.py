@@ -28,24 +28,18 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
     if message.content == f'{PREFIX}서버오픈' :
-        msg = "안내봇 테스트중... <@813959563584864266>"
+        msg = "@everyone 서버가 오픈되었습니다! 서버를 즐겨보세요! 게임 접속 : https://www.roblox.com/games/13350091161/NewLife#!/game-instances"
         channel = client.get_channel(1098618958795526224)
         await channel.send(msg)
 
-    if message.content == f'{PREFIX}미인증공지' :
-        msg = "<@&1098618958740987915> 
-뉴라이프 | NewLife 입국 [인증] 양식입니다.
+    if message.content == f'{PREFIX}서버닫음' :
+        msg = "서버가 닫혔습니다! 다음 오픈을 기대해 주세요!"
+        channel = client.get_channel(1098618958795526224)
+        await channel.send(msg)
 
-=========================================
-로블록스 닉네임 : 
-로블록스 프로필링크 : 
-인벤토리를 오픈했나요: [O/X]
-그룹 가입 인증사진 : 
-=========================================
-
-어렵지 않은 간단한 양식이니, 이 양식에 따라서 입국심사 [인증] 해주시면 감사하겠습니다.
--뉴라이프 관리진 일동-"
-        channel = client.get_channel(1098618960007671827)
+    if message.content == f'{PREFIX}안내봇점검' :
+        msg = ":tools: 안내봇 점검 및 테스트중입니다! 이용에 착오없으시길 바랍니다."
+        channel = client.get_channel(1098618958795526224)
         await channel.send(msg)
 
 @client.event
